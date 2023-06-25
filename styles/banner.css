@@ -1,0 +1,68 @@
+.banner {
+    background: var(--blue-gradient); /* quando e um grandiente é o background quando e so cord do fundo e backgroun-color */
+    color: var(--white); /* quando e  somente cor do texto e color */
+    text-align: center;
+    padding: 2.5em 2em; /*  padding ele cria aquele espaçamento interno, então ele vai limitar aqui até onde vai os meus elementos,
+     eu botei com a medida EM, que significa o tamanho da fonte padrão que eu tinha colocado que era 16px, então 2.5 ele faz “2.5 x 16”, e aqui ele faz 2. Então ficaria 32px.
+     Só que é uma medida mais responsiva, fica mais fácil de ele se adaptar a tela /tem um link artigo explicando */
+}
+
+.banner__title {
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+
+.banner__text {
+    font-weight: 500;
+    margin: 1em 0 ; /* podemos reaproveitar, em vez de fazer um espaçamento para baixo no título, em vez de fazer um espaçamento para baixo no texto então já aplicamos, 
+    tanto em cima quanto embaixo no texto que daí ele já separa tudo. */
+}
+
+.banner__search  {
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    border-radius: 24px;
+    padding: 1em;
+    width: 100%;
+}
+
+.banner__search::placeholder {
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--white);
+    background: url("../assets/Pesquisa.svg") no-repeat; /* quando eu colo a imagem ela fica repetido varias vezes no-repeat faz com quela nao repita */
+    background-position: 1em;
+}
+
+@media screen and (min-width: 1024px) {
+    .banner__title {
+        font-size: 36px;
+    }
+
+    .banner__search {
+        width: 50%;
+    }
+
+    .banner__search::placeholder {
+        background-position: 7em;
+    }
+    
+}
+
+@media screen and (min-width: 1728px) {
+    .banner__search {
+        width: 35%;
+    }
+    .banner__search::placeholder {
+        background-position: 12em;
+    }
+
+    .banner {
+        padding: 6em 0;
+    }
+
+}

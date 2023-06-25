@@ -1,0 +1,139 @@
+.carousel__title {
+    color: var(--orange);
+    background-color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1em 0 0.5em 0; /* espaçamento maior em cima e o menor embaixo,
+     o que eu fiz aqui? Eu botei o padding que ele faz aquele espaçamento interno, então ele fez um espaçamento do texto até a borda do próprio elemento */
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none; /* tira as  < > as setas laterais */
+}
+
+.swiper-pagination {
+    position: initial; /* vai colocar as bolinha do carousel em cima */
+    margin: .5em 0;
+}
+
+.card__description {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+    padding: 2px;
+
+}
+
+.card__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+}
+
+.card {
+    background: var(--white);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+}
+
+.title__description {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.title-book__description {
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+.text__description {
+    font-size: 14px;
+    padding-right: 28px;
+    
+}
+.buttons__itens {
+    margin: 0 0.5em ;
+}
+
+.buttons__anchor {
+    background-color: var(--orange);
+    padding: 1em 2.2em;
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none; /* Aqui no botão nós tivemos que tirar o text decoration para botar none, não quero que apareça, porque as âncoras se for padrão eles tem aquele risco embaixo, que é a decoração dele. E eu não queria que ele tivesse,
+     eu não quero que ele pareça um link, eu queria que ele parecesse um botão. */
+}
+
+@media screen and (min-width: 1024px) {
+    .carousel__title {
+        font-size: 26px;
+    }
+
+    .swiper-pagination {
+        margin: 2em 0 3em 0;
+    }
+
+    .swiper {
+        width: 60%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
+        top: 60%;
+    }
+
+    .card {
+        width: 40%;
+        margin: 2em auto;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .carousel__container {
+        display: flex;
+        margin: 0 20vw 3em 20vw;
+        align-items: center;
+    }
+
+    .swiper-pagination {
+        margin: 1em 0;
+    }
+
+    .swiper {
+        width: 50%;
+    }
+
+    .title__description {
+        font-size: 32px;
+    }
+
+    .text__description {
+        font-size: 16px;
+    }
+
+    .description {
+        margin-right: 2em;
+    }
+
+    .card {
+        width: 60%;
+        margin-left: 3em;
+    }
+}
+

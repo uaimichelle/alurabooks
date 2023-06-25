@@ -1,0 +1,61 @@
+hr {
+    margin: 0;
+
+}
+
+.footer {
+    background-color: var(--white);
+    padding: 1em;
+}
+
+.list-footer {
+    display: none; /* para sumir quando começamos a ver ele no mobile, e aparecer só quando aumentar nos nossos media queries, quando ele
+     chegar no valor que colocamos, aí vai aparecer esses elementos de outras resoluções. */
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        display: flex;
+        justify-content: space-around; /* vai colocar um espaco entre as colunas */
+    }
+
+    .list-footer {
+        display: block; /* para sumir quando começamos a ver ele no mobile, e aparecer só quando aumentar nos nossos media queries, quando ele chegar
+         no valor que colocamos, aí vai aparecer esses elementos de outras resoluções. */
+    }
+
+    .list-footer__item {
+        display: flex; /* o flex box ele nos disponibiliza esse atributo, essa propriedade, se você não tivesse colocado com flex, não 
+        teria como usar esse align-items para ele ficar centralizado.*/
+        align-items: center;
+        margin: 0.6em;
+    }
+
+    .list-footer__link {
+        color: var(--gray);
+        text-decoration: none;
+        margin-left: 0.6em;
+    }
+
+    .list-footer__title {
+        font-size: 14px;
+        color: var(--grey-light);
+    }
+
+    .footer__title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .list-footer {
+        border-left: 1px solid var(--grey-light);
+        padding-left: 1em;
+    }
+
+    .footer {
+        padding: 3em;
+    }
+}
+
